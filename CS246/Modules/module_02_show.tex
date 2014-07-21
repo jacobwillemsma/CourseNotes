@@ -1,0 +1,38 @@
+\newpagesection{Linux and the Shell}
+
+You're finally in the world of Linux.  It's ok if you're a little lost and scared.  That's normal.\\
+
+For the purposes of this course, we will be spending most of our time in something called the shell.\\
+
+\defnbox{Shell}{The Shell is an interface for interacting in the Linux operating system.  It is used for everything from creating files, to connecting to servers to writing code.  There's are two types of interfaces, graphical and command-line.  The shell is a command-line interface.}
+
+\newpagesubsection{File Systems}
+
+The file system present in Linux is very similar to what you are used to in other operating systems.  The file system is set up in a tree-like hierarchy with \textbf{directories} and \textbf{files}.  It is also possible to have directories inside of directories.\\
+
+\defnbox{Path}{A path is just a way of illustrating where you are in the file system.  This is represented in the shell of a single line of directories and subdirectories separated by a forward slash.  There are two types of paths, absolute and relative.  The absolute path is the list of directories from a special directory called the \textbf{root} note.  The relative path is the path relative to the working directory (not necessarily the root).  Typing \emph{pwd} at any time in the shell with output the absolute path.}
+
+Getting around in the shell is another task that requires a little bit of learning.  The command \emph{cd}  which stands for change directory does exactly that.\\
+
+\begin{enumerate}
+
+\item cd "directory name" - changes the current directory to the specified directory.
+\item cd .. - changes the current directory to the parent directory.
+\item cd ~ - changes the current directory to the home directory.
+
+\end{enumerate}
+
+The next handy command is \emph{ls} which stands for list files.  When in your shell, writing \emph{ls} at any time will list all the directories and files in the currently directory. All the commands for \emph{cd} also work as expected for ls.\\
+
+Another quick tip for Linux is that calling \emph{man "command name"} will open the manual for any given command.  This manual will have a user guide for the command including how to properly use it and all the different special add-ons with the command (there are many).\\
+
+\exbox{1}{Moving through a file directory in Linux}
+
+\begin{code}[Bash]
+cd cs246/1141/a1      Changes the directory to assignment 1 of cs246.
+ls                    Lists all the files in the present directory
+a1q1.cc a1q2.cc test1.in test1.out
+cd ..                 Changes the directory to the parent directory.
+pwd                   Lists the present working directory.
+/u/wjwillem/cs246/1141/
+\end{code}

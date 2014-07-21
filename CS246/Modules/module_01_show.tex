@@ -1,0 +1,55 @@
+\newpagesection{Introduction}
+
+The official catalog entry for CS246 at the University of Waterloo is as follows:\\
+
+\defnbox{CS246}{This course introduces students to basic UNIX software development tools and object-oriented programming in C++ to facilitate designing, coding, debugging, testing, and documenting medium-sized programs. Students learn to read a specification and design software to implement it. Important skills are selecting appropriate data structures and control structures, writing reusable code, reusing existing code, understanding basic performance issues, developing debugging skills, and learning to test a program.}
+
+In the prerequisite course -- CS136, the focus was programming in a functional and imperative paradigm. However in CS246, the focus has shifted to programming in an object oriented paradigm in C++.\\
+
+\defnbox{Functional Paradigm}{The process of evaluating code as a sequence of Mathematical functions, avoiding mutation and the manipulation of state. It has an emphasis on function definition, function application and recursion.}
+
+\defnbox{Imperative Paradigm}{The process of evaluating statements that change a programs state. This is done through mutation and control flow.}
+
+\defnbox{Object Oriented Programming (OPP)}{The process of representing concepts as "objects" that have data fields and associated procedures (or functions) known as methods.}
+
+\newpagesubsection{Syntax}
+
+We now are told to quickly change languages to C++, oh no! What about my precious syntax knowledge.  Not to worry, the C++ gods had this all covered.  Nearly all C programs you've ever written have the capability to run in C++, so all that precious knowledge we picked up in CS136 has not gone to waste.  In fact, it is in most cases the same!  The following code is in "C++", but you'll notice it's no different than C.\\
+
+\exbox{1}{The following function, $f$ consumes two integers, $x$ and $y$ and produces the sum of $x$ and $y$.}
+
+\begin{code}[C]
+int addTogether(int x, int y) {
+	return x + y;
+}
+\end{code}
+
+Not bad eh?\\
+
+However, in this course we will not begin with C++, instead we will familiarize ourselves with the Linux environment first.  What is Linux you may ask?  When you hear Windows you may think of a bunch of different operating systems under the same "umbrella": Vista, 7, 8, XP, 98 (if you're really old).  Linux is almost exactly like that, however all the different distributions (distros) of linux are not owned by the same entities and in fact, are generally free and open source software!
+
+\defnbox{Linux}{Is a UNIX like computer operating system under the model of free open source software.  It was first pioneered by our lord and saviour Richard Stallman during the founding of the GNU Project.}
+
+\defnbox{Free and Open Source (FOSS) Software}{Software that any is freely licensed to use, copy, study and change in any way and where the source code is openly shared and improved.}
+
+\defnbox{Distributions}{A Linux distribution is a version of Linux.  Since it is FOSS, many people have created their own versions in order to specialise specific tasks, whether those be: system usability, security, server hosting, et cetera.  All these different versions are classified as distributions.}
+
+\newpagesubsection{Getting Started}
+
+For me, this is always the most daunting task at the beginning of a CS course and I think it may be like this for a number of students.  As a result, I've put together a setup guide to get the proper environment running on your computer!\\
+
+\subsubsection*{Getting a Terminal}
+If you are using a Macintosh computer, you're already mostly finished!  Look at you and your shiny Starbucks/Facebook machine go!  The only step you need to do at this moment is to go to Utilities inside the Applications folder and locate the "Terminal".\\
+
+Now, if your machine didn't cost you as much as a used car, you're probably on a PC.  In this case, there is a little more work to be done!  You have a few options, you can install and dual boot a Linux instance on your machine, or use a program to connect to the university's Linux servers.  Personally, I prefer the first option, but I will set you up on the second option as well.\\
+
+The first step to dual booting a Linux distribution is to pick which distribution you'd like to run.  Personally, I think for beginners Ubuntu is the most familiar and simple to use.  Head on over to \url{http://www.ubuntu.com/desktop} to download the latest version.\\
+
+The install will guide you through the process of partitioning your hard drive.  When allocating space, you shouldn't need any more than 10GB, unless you wish to use it as a primary operating system.\\
+
+Once installed, when booting up your computer you will have the choice of either Windows or Ubuntu.  When in Linux, at any time holding Control + Alt + T will open your terminal!\\
+
+An alternative to dual booting is to install \href{http://www.cygwin.com/}{Cygwin} or \href{http://www.putty.org/}{Putty}.  I'll leave the installation up to you!
+
+
+
