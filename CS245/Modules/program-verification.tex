@@ -1,0 +1,138 @@
+\newpagesection{Program verification}
+
+\subsection{Introduction}
+\defnbox{Program correctness}{The act of checking if a given program satisfies its specification, i.e. does it do what it should?}
+
+There are a few ways to check for program correctness.\\
+
+\begin{itemize}
+\item inspection.
+\item testing (white box and black box).
+\item formal verification.
+\end{itemize}
+
+You guessed it, for this class, we'll do it the formal way.\\
+
+\defnbox{Program Specification}{Rules by which the program must obey.  Preconditions and Postconditions.}
+\defnbox{Formal verification}{Formal verification tests a programs correctness by using formal program states and by proving the a program satisfies the specification for \textbf{all} valid inputs.}
+
+We're obviously not going to do this with a whole complicated language like C++, instead we'll focus on a smaller subset of a language like C/C++ or Java.  Our \emph{Core Programming Language} contains some familiar concepts:\\
+
+\begin{itemize}
+\item Integer and Boolean Expressions.
+\item Assignment.
+\item Sequence.
+\item If - Then - Else.
+\item While/For loops.
+\item Arrays.
+\item Functions and Procedures.
+\end{itemize}
+
+\defnbox{State}{The \emph{state} of a program is the values of the variable at a \textbf{particular time} in the execution of the program.  The reason for a state being only circumstance of a program at a particular time is that expressions often evaluate relative to the current state of the program (i.e. we can go inside the program and see what's going on).  Commands change the state of the program.}
+
+Say we had the following function (calculate the factorial).\\
+\begin{code}[C]
+y = 1;
+z = 0;
+while (z != x) {
+		z = z + 1;
+		y = y * z;
+}
+\end{code}
+
+A few program states would then be:\\
+\begin{itemize}
+\item Initial state s0: z=0, y=1.
+\item State s1: z=1, y=1.
+\item State s2: z=2, y=2.
+\item State s3: z=3, y=6.
+\item State s4: z=4, y=24.
+\item ...
+\end{itemize}
+
+In order to verify program correctness, we need to create a formal of which to present our data.
+
+\defnbox{Hoare triple}{A specification of a program \emph{C} is a Hoare triple with \emph{C} as the second component: \{\emph{P}\} \emph{C} \{\emph{Q}\}
+
+In this format, \emph{P} represents the preconditions, \emph{C} the program code and \emph{Q} the postconditions.  \emph{P} and \emph{Q} collectively make up the program specifications.}
+
+\exbox{1}{If the input $x$ is a positive integer, compute a number whose square is less than $x$.}
+
+\begin{code}[C]
+{x > 0} C { y * y < x}
+\end{code}
+
+\newpagesubsection{Correctness}
+
+Given that we now have the notion of a Hoare triple, we want to develop a notion of a proof which will allow us to prove that a program \emph{C} satisfies the given specification \emph{P} and \emph{Q}.\\
+
+\defnbox{Partial correctness}{A triple \{\emph{P}\} \emph{C} \{\emph{Q}\} is \textbf{satisfied under partial correctness} if and only if while executing the program on every possible \textbf{state} the resulting state, \emph{s'}, if the program were to terminate, \emph{s'} would also satisfy \{\emph{Q}\}.
+
+We write \models_{par} \{\emph{P}\} \emph{C} \{\emph{Q}\}.}
+
+Important to note triples that are partial satisfied do \emph{not} necessary terminate.  All that matters is that if it were to terminate, the current state would satisfy the postcondition \{\emph{Q}\}.\\
+
+\exbox{2}{In fact, here's a example of a partially correct triple that does \textbf{not} terminate.}
+\begin{code}[C]
+{true}
+while true {x = 0;}
+{x = 0;}
+\end{code}
+
+Partial correctness seems like an awfully weak way to classify programs as correct.  Any function that does not terminate would actually be partially correct under this definition (provided the current state satisfies \{\emph{Q}\}).\\
+
+What if we want to make sure the program works on all inputs \textbf{and} terminates?\\
+
+\defnbox{Total correctness}{A triple \{\emph{P}\} \emph{C} \{\emph{Q}\} is satisfied under total correctness if and only if while executing the program on every possible \textbf{state} the resulting state, \emph{s'} also satisfies \{\emph{Q}\}.  That is to say, it is partially correct \textbf{and} terminates!
+
+We write \models_{tot} \{\emph{P}\} \emph{C} \{\emph{Q}\}.}
+
+\exbox{2}{The following is an example of total correctness.}
+\begin{code}[C]
+{x >= 0;}
+y = 1;
+z = 0;
+while (z != x) {
+		z = z + 1;
+		y = y * z;
+}
+{y = x!;}
+\end{code}
+\\
+\exbox{2}{The following is an example of neither, as the input is consumed.}
+\begin{code}[C]
+{x >= 0;}
+y = 1;
+while (x != 0) {
+		y = y * x;
+		x = x - 1;
+}
+{y = x!;}
+\end{code}
+In this example, we would continuously, independently from the precondition be comparing y = 0!, since we have no notion that \emph{x} in  was the same as the \emph{x} in \{\emph{P}\}.\\
+\\ 
+To prove correctness, we are interested in being satisfied by \emph{total correctness}.  However, in order to find out if a triple is \emph{satisfied under total correctness} we will first go about proving that it is \emph{satisfied under partial correctness} and then prove termination separately.\\
+
+\begin{itemize}
+\item Proving partial correctness will be done by introducing a \emph{sound} and \emph{complete} set of \textbf{inference rules}.  Similar to what we did in natural deduction.
+\item Proving termination is a separate idea, but is often pretty trivia.
+\end{itemize}
+
+Occasionally in our specifications we will need additional variable that do not appear in the program.\\
+
+\defnbox{Logical variables}{Logicals serve as placeholders to help differentiate variables used in code from the ones in the specifications.  They do not appear in the code and are themselves not quantified (though they can follow rules for the variables in the specification.)}
+
+\exbox{2}{For example, in the example where \emph{x} was previously consumed.}
+\begin{code}[C]
+{x_0 >= 0;}
+y = 1;
+while (x != 0) {
+		y = y * x;
+		x = x - 1;
+}
+{y = x_0!;}
+\end{code}
+
+Similar to the way we did substitutions back in the glory days of CS136.  Oh yeah... you remember.  You wish you didn't, but you do.\\
+
+\newpagesubsection{Inference Rules}
