@@ -1,0 +1,134 @@
+% Document Information.
+\documentclass[12pt, twoside, exarticle]{article}
+
+% Included packages.
+\usepackage[left=28mm, top=24mm, right=28mm, bottom=24mm, asymmetric, reversemarginpar]{geometry}
+\usepackage{titlesec}
+\usepackage{marginnote}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xkeyval}
+\usepackage{varwidth}
+\usepackage{microtype} % Word Breaking
+\usepackage{hyperref}
+\usepackage{enumerate}
+
+
+
+% Extra Document Information.
+\newcommand{\docbuild}{Midterm}
+
+\title{\textbf{CS245 Review Notes \docbuild\ Edition}}
+
+% Defines RGB colors.
+\input{Functions/colors.tex}
+
+% Listing package formatting.
+\input{Functions/listing_formatting.tex}
+
+% Box commands.
+\input{Functions/box_commands.tex}
+
+% Document formatting.
+\input{Functions/document_formatting.tex}
+
+% Section formatting
+\input{Functions/section_formatting.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Start) Document                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Start) Title                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\hfil\parbox[t]{0.7\textwidth}{\centering\LARGE\bfseries\@title}\par
+\kern0.5cm \hrule\kern0.5cm
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (End) Title                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Start) Preamble                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Removes all document styling from this page.
+\thispagestyle{empty}
+
+% Preamble Page
+\input{Pages/preamble.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (End) Preamble                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Clears the rest of the preamble page.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Start) Disclaimer                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Removes all document styling from this page.
+\thispagestyle{empty}
+
+% Disclaimer Page
+\input{Pages/disclaimer.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (End) Disclaimer                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Clears the rest of the discalaimer page.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Start) Table of Contents                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Removes all document styling from this page.
+\thispagestyle{empty}
+
+\renewcommand{\contentsname}{Table of Contents}
+
+% Makes the Table of Contents
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (End) Table of Contents                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Clears the rest of the table of contents page.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (Start) Module Content                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Declares the page numbering as arabic (1, 2, 3, 4 ...).
+\pagenumbering{arabic}
+
+% Declares the margin values for all of the module content.
+\setlength{\oddsidemargin}{1.6cm}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\marginparwidth}{2.6cm}
+\setlength{\marginparsep}{0.25cm}
+
+% Module 01
+\input{Modules/program-verification.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (End) Module Content                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (End) Document                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
