@@ -68,7 +68,7 @@ Given that we now have the notion of a Hoare triple, we want to develop a notion
 
 \defnbox{Partial correctness}{A triple \{\emph{P}\} \emph{C} \{\emph{Q}\} is \textbf{satisfied under partial correctness} if and only if while executing the program on every possible \textbf{state} the resulting state, \emph{s'}, if the program were to terminate, \emph{s'} would also satisfy \{\emph{Q}\}.
 
-We write \models_{par} \{\emph{P}\} \emph{C} \{\emph{Q}\}.}
+We write $\models_{par}$ \{\emph{P}\} \emph{C} \{\emph{Q}\}.}
 
 Important to note triples that are partial satisfied do \emph{not} necessary terminate.  All that matters is that if it were to terminate, the current state would satisfy the postcondition \{\emph{Q}\}.\\
 
@@ -85,9 +85,9 @@ What if we want to make sure the program works on all inputs \textbf{and} termin
 
 \defnbox{Total correctness}{A triple \{\emph{P}\} \emph{C} \{\emph{Q}\} is satisfied under total correctness if and only if while executing the program on every possible \textbf{state} the resulting state, \emph{s'} also satisfies \{\emph{Q}\}.  That is to say, it is partially correct \textbf{and} terminates!
 
-We write \models_{tot} \{\emph{P}\} \emph{C} \{\emph{Q}\}.}
+We write $\models_{tot}$ \{\emph{P}\} \emph{C} \{\emph{Q}\}.}
 
-\exbox{2}{The following is an example of total correctness.}
+\exbox{3}{The following is an example of total correctness.}
 \begin{code}[C]
 {x >= 0;}
 y = 1;
@@ -98,8 +98,8 @@ while (z != x) {
 }
 {y = x!;}
 \end{code}
-\\
-\exbox{2}{The following is an example of neither, as the input is consumed.}
+
+\exbox{4}{The following is an example of neither, as the input is consumed.}
 \begin{code}[C]
 {x >= 0;}
 y = 1;
