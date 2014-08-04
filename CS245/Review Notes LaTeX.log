@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.22)  23 JUL 2014 22:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.22)  4 AUG 2014 10:09
 entering extended mode
 **Review*Notes*LaTeX.tex
 ("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.tex"
@@ -421,12 +421,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
 ) [2
 
-]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+] ("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.toc"
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+)
 \tf@toc=\write4
-[3
+ [3
 
 ]
 (C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Modules/propositional-logic.
@@ -445,12 +449,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
 
 Overfull \hbox (7.83325pt too wide) in paragraph at lines 11--12
 [][][][][][][]
@@ -748,9 +746,133 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[6])
+[6]
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 136--137
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+)
+(C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Modules/predicate-logic.tex
+[7
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+[][]\OT1/cmr/bx/n/10 EXAMPLE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+\OT1/cmr/bx/n/10 Mo-ti-vat-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 9--10
+[][][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 23--24
+[][][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+[8
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[][]\OT1/cmr/bx/n/10 EXAMPLE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+\OT1/cmr/bx/n/10 Ex-am-ple
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 37--39
+[][][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 37--39
+[][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
+
+LaTeX Warning: Marginpar on page 9 moved.
+
+[9])
 (C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Modules/program-verification
-.tex [7
+.tex [10
 
 ]
 Overfull \hbox (7.83325pt too wide) in paragraph at lines 4--5
@@ -803,7 +925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--18
  []
 
 
-LaTeX Warning: Marginpar on page 8 moved.
+LaTeX Warning: Marginpar on page 11 moved.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
@@ -835,7 +957,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[8
+[11
 
 ]
 Package microtype Info: Loading generic settings for font family
@@ -894,7 +1016,7 @@ LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
 (Font)              using `OML/cmm/m/it' instead
 (Font)              for symbol `textgreater' on input line 62.
 
-[9]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
@@ -974,7 +1096,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-[10
+[13
 
 ]
 Overfull \hbox (7.83325pt too wide) in paragraph at lines 102--103
@@ -1041,30 +1163,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
-[11] [12])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
- [13
+[14] [15])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
+ [16
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
 
 ("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `Review*Notes*LaTeX.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 8909 strings out of 493921
- 137109 string characters out of 3144876
- 288944 words of memory out of 3000000
- 11938 multiletter control sequences out of 15000+200000
- 13526 words of font info for 77 fonts, out of 3000000 for 9000
+ 8931 strings out of 493921
+ 137583 string characters out of 3144876
+ 288866 words of memory out of 3000000
+ 11941 multiletter control sequences out of 15000+200000
+ 13782 words of font info for 81 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  37i,7n,73p,496b,1312s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -1079,9 +1201,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on "Review Notes LaTeX.pdf" (16 pages, 185685 bytes).
+Output written on "Review Notes LaTeX.pdf" (19 pages, 200477 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
- 19545 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 270 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 19569 words of extra memory for PDF output out of 20736 (max. 10000000)
 
