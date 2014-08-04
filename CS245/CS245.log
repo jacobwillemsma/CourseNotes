@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.22)  4 AUG 2014 10:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.22)  4 AUG 2014 10:51
 entering extended mode
-**Review*Notes*LaTeX.tex
-("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.tex"
+**CS245.tex
+(C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\CS245.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -285,7 +285,7 @@ g.tex)
 LaTeX Warning: Unused global option(s):
     [exarticle].
 
-("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.aux")
+No file CS245.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
@@ -300,7 +300,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -380,9 +379,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 42.
 LaTeX Info: Redefining \pageref on input line 42.
 LaTeX Info: Redefining \nameref on input line 42.
-
-("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.out")
-("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.out")
 \@outlinefile=\write3
 
 (C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Pages/preamble.tex
@@ -421,14 +417,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
 ) [2
 
-] ("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.toc"
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 1.
-)
+]
 \tf@toc=\write4
  [3
 
@@ -449,6 +438,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 11.
 
 Overfull \hbox (7.83325pt too wide) in paragraph at lines 11--12
 [][][][][][][]
@@ -833,37 +828,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
 [][]\OT1/cmr/bx/n/10 EXAMPLE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
-\OT1/cmr/bx/n/10 Ex-am-ple
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+\OT1/cmr/bx/n/10 First FOL
  []
 
 
-Overfull \hbox (7.83325pt too wide) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
+
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 46--47
 [][][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
-Overfull \hbox (7.83325pt too wide) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[][]\OT1/cmr/bx/n/10 EXAMPLE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+\OT1/cmr/bx/n/10 Ex-am-ple
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 48--50
+[][][][][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+
+Overfull \hbox (7.83325pt too wide) in paragraph at lines 48--50
 [][][][][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
@@ -1169,26 +1204,31 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
-
-("C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\Review Notes LaTeX.aux")
+ (C:\Users\Jacob\Documents\GitHub\CourseNotes\CS245\CS245.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
-Package rerunfilecheck Info: File `Review*Notes*LaTeX.out' has not changed.
-(rerunfilecheck)             Checksum: <no file>.
 
+
+Package rerunfilecheck Warning: File `CS245.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `CS245.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  9B90764B32EC1BC1E41CA36D036F1F18;874.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 8931 strings out of 493921
- 137583 string characters out of 3144876
- 288866 words of memory out of 3000000
- 11941 multiletter control sequences out of 15000+200000
- 13782 words of font info for 81 fonts, out of 3000000 for 9000
+ 8911 strings out of 493921
+ 136729 string characters out of 3144876
+ 288926 words of memory out of 3000000
+ 11927 multiletter control sequences out of 15000+200000
+ 13891 words of font info for 82 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,7n,73p,496b,1312s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,7n,73p,483b,1312s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C
@@ -1201,9 +1241,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on "Review Notes LaTeX.pdf" (19 pages, 200477 bytes).
+Output written on CS245.pdf (19 pages, 194960 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
+ 213 PDF objects out of 1000 (max. 8388607)
  81 named destinations out of 1000 (max. 500000)
- 19569 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 19457 words of extra memory for PDF output out of 20736 (max. 10000000)
 

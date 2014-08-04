@@ -31,8 +31,19 @@ In the previous case would would have something as follows:\\
 \item $Y(x,y)$:	$x$ is younger than $y$.
 \end{itemize}
 
+Quantifiers are the next big change brought into FOL.  Quantifiers are used to make the difference between \emph{every} and \emph{some}.  We will use what we learned in MATH135 to describe these:\\
+\begin{itemize}
+\item $\forall$:	For all (every).
+\item $\exists$:	There exists (some).
+\end{itemize}
 
+For all is called the \emph{universal quantifier} and there exists is called the \emph{existential quantifier}.\\
 
+Just with these two additions and our knowledge of propositional logic, we can right the previous statement (although a little paraphrased) completely in FOL.
+
+\exbox{First FOL Statement}{The Statement \emph{Every student is younger than some instructor.} can be translated into FOL as the following:\\
+
+$\forall$x.(S(x)$\to$($\exists$y.(I(y) $\wedge$ Y(x,y))))}
 
 \defnbox{Title}{Definition}
 \exbox{Example number}{Example text.}
