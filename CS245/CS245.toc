@@ -7,8 +7,9 @@
 \contentsline {subsection}{\numberline {1.4}Semantics of propositional logic}{7}{subsection.1.4}
 \contentsline {section}{\numberline {2}First Order Predicate Logic}{8}{section.2}
 \contentsline {subsection}{\numberline {2.1}Introduction/Motivation}{8}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Logic}{10}{subsection.2.2}
-\contentsline {section}{\numberline {3}Program verification}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}Introduction}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Correctness}{13}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Inference Rules}{16}{subsection.3.3}
+\contentsline {subsection}{\numberline {2.2}Syntax of Predicate Logic}{10}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Semantics of Predicate Logic}{12}{subsection.2.3}
+\contentsline {section}{\numberline {3}Program verification}{13}{section.3}
+\contentsline {subsection}{\numberline {3.1}Introduction}{13}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Correctness}{15}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Inference Rules}{18}{subsection.3.3}

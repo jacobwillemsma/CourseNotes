@@ -7,8 +7,9 @@
 \BOOKMARK [2][-]{subsection.1.4}{Semantics of propositional logic}{section.1}% 7
 \BOOKMARK [1][-]{section.2}{First Order Predicate Logic}{}% 8
 \BOOKMARK [2][-]{subsection.2.1}{Introduction/Motivation}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.2}{Logic}{section.2}% 10
-\BOOKMARK [1][-]{section.3}{Program verification}{}% 11
-\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.2}{Correctness}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.3}{Inference Rules}{section.3}% 14
+\BOOKMARK [2][-]{subsection.2.2}{Syntax of Predicate Logic}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Semantics of Predicate Logic}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{Program verification}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Correctness}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.3}{Inference Rules}{section.3}% 15

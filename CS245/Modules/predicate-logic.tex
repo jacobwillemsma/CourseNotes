@@ -45,6 +45,80 @@ Just with these two additions and our knowledge of propositional logic, we can r
 
 $\forall$x.(S(x)$\to$($\exists$y.(I(y) $\wedge$ Y(x,y))))}
 
-\defnbox{Title}{Definition}
-\exbox{Example number}{Example text.}
-\newpagesubsection{Logic}
+Now, let's add a little more functionality to the language with \emph{functions}.\\
+
+Functions give us a way to express statements more concisely then just simple predicates.  Predicates can lead to ambiguity.  For instance, if we wanted to show that every student is younger than \emph{their} professor, our simple professor predicate would not cut it.\\
+
+\exbox{Removing Ambiguity}{For example, here is how to integrate functions to show that \emph{Every student is younger than their instructor.}\\
+
+$\forall$x.(S(x)$\to$(Y(x,I(x))))\\
+
+In this statement, we've changed I(x) to return the professor of x.  This way we know that a student x has a professor and that for all x, x is younger than its professor.}
+
+\newpagesubsection{Syntax of Predicate Logic}
+
+The syntax of Predicate Logic contains many similarities to propositional logic, though initially there is a lot of new content.  Rest assured, it will all make sense soon.\\
+
+Predicate logic (\emph{L}) contains 7 different types of symbols:\\
+\begin{itemize}
+\item \emph{c, d, c$_1$, c$_2$}:	Constants
+\item \emph{f, g, h, f$_1$}:	Functions
+\item \emph{x, y, z, x$_1$}:	Variables
+\item \emph{P, Q, P$_1$, P$_2$}:	Predicate Symbols
+\item \emph{$\to$, $\leftrightarrow$, $\lnot$, $\wedge$, $\lor$}:	Logical Connectives	
+\item \emph{$\exists$, $\forall$}:	Quantifiers
+\item "(", ")", ".", ",":	Punctuation
+\end{itemize}
+
+To make this a little easier to swallow, the majority of the syntax breaks down into two categories:\\
+
+\defnbox{Terms}{The set \emph{Term(L)} of \textbf{terms} of \emph{L} is define dusing the following rules:\\
+\begin{itemize}
+\item All constants are terms.
+\item All variables are terms.
+\item If \emph{t$_1$,...,t$_n$ $\in$ Term(L)} and \emph{f} is an n-ary function symbol, then \emph{f(t$_1$,...,t$_n$) $\in$ Term(L)}.
+\end{itemize}}
+
+\defnbox{Atoms}{Let \emph{P} be a predicate (\emph{n}-ary relation).  An expression of \emph{L} is an \textbf{atom} in \emph{Atoms(l)} if and only if it is of the form \emph{P(t$_1$,...,t$_n$)} where \emph{t$_1$,...,t$_n$} are terms in \emph{Term(L)}}
+
+Just as in propositional logic with \emph{Form(L$^p$)}, \emph{Form(L)} is defined inductively.
+
+\defnbox{Form(\emph{L})}{The set \emph{\textbf{Form(L)}} of first-order logic formulas as follows:
+\begin{enumerate}
+\item \emph{Atom(L)} $\subseteq$ \emph{Form(L)}
+\item If $\alpha$ $\in$ \emph{Form(L)}, then ($\lnot$$\alpha$) $\in$ \emph{Form(L)}
+\item If $\alpha$,$\beta$ $\in$ \emph{Form(L)}, then ($\alpha$\emph{*}$\beta$) $\in$ \emph{Form(L)}, where \emph{*} $\in$ \{$\to$, $\leftrightarrow$, $\wedge$, $\lor$\}.
+\item If $\alpha$ $\in$ \emph{Form(L)} and if \emph{x} is a variable, then ($\forall$\emph{x}.$\alpha$) $\in$ \emph{Form(L)} and  ($\exists$\emph{x}.$\alpha$) $\in$ \emph{Form(L)}.
+\end{enumerate}}
+
+Similar again to propositional logic, you can easily trace out a parse tree for FOL to determine whether or not a formula is in \emph{Form(L)}.\\
+
+I will not be drawing up examples in the notes, however I will detail the differences between FOL parse trees and propositional logic parse trees.
+
+\begin{itemize}
+\item Quantifiers $\forall$\emph{x} and $\exists$\emph{y} form nodes like negation. (i.e., only one sub-tree)
+\item Predicate \emph{P(t$_1$,...,t$_n$)} has a node labelled \emph{P} with a sub-tree for each of the terms \emph{t$_1$,...,t$_n$}.
+\end{itemize}
+
+\defnbox{Bound and Free}{We say that an occurrence of \emph{x} is \textbf{free} in first-order formula $\alpha$, if in the parse tree of $\alpha$, there is no upwards path from \emph{x} to a node labeled by $\forall$\emph{x} or $\exists$\emph{x}.  An occurrence that is not free is called \textbf{bound}.}
+
+Once again, in another similarity, predicate logic also contains the idea of a \textbf{scope}.\\
+
+\defnbox{Scope}{If $\forall$\emph{x}.A(\emph{x}) or $\exists$\emph{x}.A(\emph{x}) is a segment of B, A(\emph{x}) is called the \textbf{scope} in B of the $\forall$\emph{x} or $\exists$\emph{x} on the left of A(\emph{x}).}
+
+In FOL, a formulate A $\in$ \emph{Form(L)} is \textbf{closed} if the set of free variables is empty.  That is, there are no free variables in the formula.\\
+
+However, if there are free variables, we may consider using a very important aspect of predicate logic, that of \textbf{substitution}.\\
+
+ \defnbox{Substitution}{Given a variable \emph{x}, a term \emph{t} and a formula, $\alpha$.  We define $\alpha$[\emph{x}/\emph{t}] to be the formula obtained by replacing each free occurrence of variable \emph{x} in $\alpha$ with \emph{t}.\\
+
+ Note that with this definition, if there are no free occurrences of a variable (a \textbf{closed} formula) then we have that: $\alpha$[\emph{x}/\emph{t}] = $\alpha$.\\
+
+ Should we be able to make the substitution with term \emph{t}, we say that it is \textbf{free for} a variable \emph{x}.  You \textbf{cannot} substitute in a variable which will become bound, which basically means, don't use the same letter as something else already in the formula... since they are not the same.}
+
+ \newpagesubsection{Semantics of Predicate Logic}
+
+
+
+
+
