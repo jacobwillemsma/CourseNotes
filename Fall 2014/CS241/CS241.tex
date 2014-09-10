@@ -1,0 +1,34 @@
+\documentclass[12pt, twoside, exarticle]{article}
+\usepackage[left=28mm, top=24mm, right=28mm, bottom=24mm, asymmetric, reversemarginpar]{geometry}
+\usepackage{titlesec}
+\usepackage{marginnote}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xkeyval}
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\title{\textbf{CS240 Review Notes}}
+\input{styles.tex}
+\begin{document}
+\makeatletter
+\hfil\parbox[t]{0.7\textwidth}{\centering\LARGE\bfseries\@title}\par
+\kern0.5cm \hrule\kern0.5cm
+\makeatother
+
+% Table of contents
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\clearpage
+
+% Content
+\pagenumbering{arabic}
+\setlength{\oddsidemargin}{1.6cm}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\marginparwidth}{2.6cm}
+\setlength{\marginparsep}{0.25cm}
+
+
+
+\end{document}
