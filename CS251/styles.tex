@@ -1,0 +1,125 @@
+% Code box.
+\lstnewenvironment{code}[1][]
+	{\begingroup
+		%\vfil\penalty-9999\vfilneg\lstset{language=#1}
+		\lstset{language=#1}
+	}
+	{\endgroup}
+
+% Definition box.
+\newcommand{\defnbox}[2] {
+	\setlength{\fboxsep}{8pt}
+	\marginpar {
+		\vspace{0.9em}
+		\begin{center}
+		\footnotesize{\textbf{\color{brown}DEFINITION}}
+		\footnotesize{\textbf{#1}}
+		\end{center}
+	}
+	\colorbox{lightyellow}{
+		\begin{minipage}{\dimexpr\linewidth-2\fboxsep}
+		#2
+		\end{minipage}
+	}
+	~\\
+}
+
+% Example box.
+\newcommand{\exbox}[2] {
+	\setlength{\fboxsep}{8pt}
+	\marginpar {
+		\vspace{0.9em}
+		\footnotesize{\textbf{\color{darkpurple}EXAMPLE #1}}
+	}
+	\colorbox{lightpurple}{
+		\begin{minipage}{\dimexpr\linewidth-2\fboxsep}
+		#2
+		\end{minipage}
+	}
+	~\\
+}
+
+% Exercise box.
+\newcommand{\exerbox}[1] {
+	\setlength{\fboxsep}{8pt}
+	\marginpar {
+		\vspace{0.9em}
+		\footnotesize{\textbf{\color{darkred}EXERCISE}}
+	}
+	\colorbox{lightred}{
+		\begin{minipage}{\dimexpr\linewidth-2\fboxsep}
+		#1
+		\end{minipage}
+	}
+	~\\
+}
+
+% Used on the side for definitions.
+\definecolor{brown}{RGB}{101, 91, 71}
+\definecolor{lightyellow}{RGB}{228, 224, 128}
+
+% Used for the code block itself.
+\definecolor{codebg}{RGB}{255, 255, 238}
+\definecolor{codeborder}{RGB}{243, 242, 222}
+
+% Used for exercises.
+\definecolor{darkred}{RGB}{203, 20, 20}
+\definecolor{lightred}{RGB}{229, 130, 130}
+
+% Used for examples.
+\definecolor{darkpurple}{RGB}{76, 60, 189}
+\definecolor{lightpurple}{RGB}{184, 183, 255}
+
+% Used for C and Lisp Syntax.
+\definecolor{purple}{RGB}{174, 19, 198}
+\definecolor{darkblue}{RGB}{0, 0, 102}
+\definecolor{lightblue}{RGB}{50, 155, 171}
+\definecolor{lightgreen}{RGB}{29, 131, 43}
+
+% Document formatting for headings.
+\pagestyle{myheadings}
+\setcounter{secnumdepth}{4} % 4 being sub sections.
+
+% Removes indentation of paragraphs.
+\setlength{\parindent}{0cm}
+
+% Sets page numbering to roman.
+\pagenumbering{roman}
+
+% Declaring the default listing style.
+\lstdefinestyle{default_style} {
+	backgroundcolor=\color{codebg},
+	rulecolor=\color{codeborder},
+	stringstyle=\color{purple},
+	keywordstyle=\color{darkblue},
+	identifierstyle=\color{lightblue},
+	commentstyle=\color{lightgreen},
+	basicstyle=\footnotesize\sffamily,
+	xleftmargin=10pt,
+	xrightmargin=10pt,
+	belowcaptionskip=10pt,
+	belowskip=20pt,
+	framesep=10pt,
+	frame=single,
+	%numbers=left,
+	%numbersep=8pt,
+	showspaces=false,
+	showstringspaces=false,
+	tabsize=2
+}
+
+% Sets the default style for all code blocks.
+\lstset {
+	style=default_style
+}
+
+% Module section shortcut commands.
+\newcommand{\newpagesection}[1] {
+	\clearpage
+	\section{#1}
+}
+
+\newcommand{\newpagesubsection}[1] {
+	\clearpage
+	\subsection{#1}
+}

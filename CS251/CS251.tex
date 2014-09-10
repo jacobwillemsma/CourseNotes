@@ -1,0 +1,90 @@
+\documentclass[12pt, twoside, exarticle]{article}
+\usepackage[left=28mm, top=24mm, right=28mm, bottom=24mm, asymmetric, reversemarginpar]{geometry}
+\usepackage{titlesec}
+\usepackage{marginnote}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xkeyval}
+\usepackage{varwidth}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\title{\textbf{CS240 Review Notes}}
+\input{styles.tex}
+\begin{document}
+\makeatletter
+\hfil\parbox[t]{0.7\textwidth}{\centering\LARGE\bfseries\@title}\par
+\kern0.5cm \hrule\kern0.5cm
+\makeatother
+
+% Preamble
+\section*{Preamble}
+\addcontentsline{toc}{subsubsection}{Preamble}
+
+Welcome to my unofficial course notes for the final exam of CS245(Summer 2014)\\
+
+The course material that has influenced the contents of these course notes are as follows:
+
+\begin{itemize}
+
+\item Course Textbook.
+\item Course slides.
+\item Posts on the CS245 Piazza.
+\item Student perspectives.
+
+\end{itemize}
+
+To preserve the chronological order that the material was presented during lecture, these review notes will follow a similar structure. However, some material in these review notes may be introduced earlier or later. This will only occur if we feel as if material flows better in a separate section than it was originally introduced in.\\
+
+% Clears the rest of the preamble page.
+\clearpage
+
+% Disclaim
+\section*{Disclaimer}
+\addcontentsline{toc}{subsubsection}{Disclaimer}
+
+I ask that you respect all of the guidelines I set forth with respect to these review notes. If you are unable to respect any of the guidelines mentioned in the proceeding few paragraphs, please delete this file or close the hard copy of the review notes.\\
+
+\begin{enumerate}
+
+\item I alone reserve the right to alter and distribute these review notes. If you see a mistake or feel as if important content is missing, contact me (information provided below) so that I can make the appropriate correction(s).
+
+\item I will be supporting the accuracy of these review notes for the remainder of the S14 semester. After such a time these review notes should be considered obsolete.
+
+\item These review notes are provided absolutely free of charge. If you paid for a hard copy or e-copy of these review notes then you are obligated to contact us so that we can take the appropriate action(s) towards the distributor.
+
+\end{enumerate}
+
+Keep in mind that these notes are in no way guaranteed to be accurate. There may be mistakes, outdated information or tangents that will not be directly related to some of the material presented in the course. These notes have been developed by me, a student during my undergraduate studies taking CS245. No professor, TA or anyone involved in the administration at the University of Waterloo has endorsed these notes.\\
+
+If you feel a need to contact me at any time for clarification, issues with the notes whatever, you can reach me at my contact information below:\\
+Jacob Willemsma, author (\textbf{wjwillem@uwaterloo.ca}).\\
+
+\subsubsection*{Acknowledgements}
+
+Some further acknowledgments to the CS245 material and other influencing figures.
+
+\begin{itemize}
+
+\item Design inspired by "Linear Algebra Course Notes" by Dan Wolczuk (with permission).
+\item CS136 Course Notes by Jacob Pollack and Jacob Willemsma
+
+\end{itemize}
+\clearpage
+\thispagestyle{empty}
+
+% Table of contents
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\clearpage
+
+% Content
+\pagenumbering{arabic}
+\setlength{\oddsidemargin}{1.6cm}
+\setlength{\evensidemargin}{\oddsidemargin}
+\setlength{\marginparwidth}{2.6cm}
+\setlength{\marginparsep}{0.25cm}
+
+
+
+\end{document}
