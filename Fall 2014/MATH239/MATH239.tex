@@ -9,7 +9,8 @@
 \usepackage{microtype}
 \usepackage{hyperref}
 \usepackage{enumerate}
-\title{\textbf{CS240 Review Notes}}
+\usepackage{amsmath}
+\title{\textbf{Math239 Review Notes}}
 \input{../../styles.tex}
 \begin{document}
 \makeatletter
@@ -28,6 +29,87 @@
 \setlength{\evensidemargin}{\oddsidemargin}
 \setlength{\marginparwidth}{2.6cm}
 \setlength{\marginparsep}{0.25cm}
+
+\section{Combinatorial Proofs}
+
+This course will begin with combinatorial proofs.  However, to begin these proofs, we must first review the definition of a function. \\
+
+\subsection{Functions}
+
+\defnbox{Function}{A function $f: A \to B$  is:
+\begin{enumerate}
+\item \textbf{Injective} if $f(x) = f(y) \to x=y$.
+\item \textbf{Surjective} if $\forall b \in B, \exists a \in A$ such that $f(a) = b$.
+\item \textbf{Bijective} if \textbf{Injective} and \textbf{Surjective}.
+\end{enumerate}
+}
+
+A bijective function is called a \textbf{bijection}.  To show that a function $A$ is in \textbf{bijection} with $B$ we must follow these steps: \\
+
+ \defnbox{Algorithm to Show Bijection}{
+ \begin{enumerate}
+ \item Define a function $f$ on $A$. Make it as clear as possible.
+ \item Show (if it is not evident) that $f(a) \in B, \forall a \in A$.
+ \item Define an inverse of $f$, $f^{-1}$.
+ \item Prove that $f \circ f^{-1} = 1$ and $f^{-1} \circ f = 1$.
+ \end{enumerate}
+ }
+
+ Now that we have the notions of functions and bijections, let's see an example of a combinatorial proof. \\
+
+ \exbox{1}{Show $\binom{n}{k} = \binom{n}{n-k}$}
+
+First, let's do the algebraic proof: \\
+
+$\binom{n}{k} = \frac{n!}{k!(n-k)!} = \frac{n!}{(n-k)! k!} = \binom{n}{n-k}$ \\
+
+Now, the combinatorial proof. \\
+
+$\binom{n}{k}$ is the number of subsets of $k$ elements in ${1, \dots, n}$.  In order to simplify this statement we'll use the following notation: $[n]$ denotes ${1, \dots, n}$.  Also, we will let $P(s)$ define the power set, that is all subsets of a set $s$. \\
+
+Now, let $P_k(s) = \{T \subseteq S \: | \: |T| = k\}$ then we know that $\binom{n}{k} = | P_k([n])$. \\
+
+Note now that there is a \textbf{Bijection} $P_k([n]) \to P_{k-n}([n])$. We can then conclude:\\
+
+$\binom{n}{k} = |P_k([n])| = |P_{n-k}([n])| = \binom{n}{n-k}$. As desired. \\ \\
+
+\exbox{2}{A binary string of length n is a word $s_1s_2,\dots,s_n$ with n letters where $s_i \in {0,1}$.  Let $B_n$ be the set of all binary strings of length n.  I claim that $P([n]) \cong B_n$ where $\cong$ means that $A\cong B$ is a \textbf{bijection}}
+
+Why? \\
+
+Consider the function:\\
+$P([n]) \to B_n$ \\
+$S \mapsto a_1,\dots,a_n$ where \\ 
+\[ a_i = \left\{ 
+  \begin{array}{l l}
+    0 & \quad \text{if i $\notin$ S}\\
+    1 & \quad \text{if i $\in$ S}
+  \end{array} \right.\] \\
+
+And its obvious inverse: \\
+$B_n \to P([n])$ \\
+$ a_1,\dots,a_n\mapsto {i\in [n] | a_i = 1}$ \\
+
+The consequence of this, as per bijection is that $|P([n])| = |B_n| = 2^n$ \\
+
+A few concluding questions: \\
+
+\exbox{3}{How many binary strings of length n contain exactly $k$ $1$'s'.}
+
+\exbox{4}{How many binary strings of length n do not contain an odd length maximal substring of $0$'s'.}
+
+\exbox{5}{How many binary strings of length n do not contain $0101$ as a substring.}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

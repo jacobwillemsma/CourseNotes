@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage{graphicx}
 \title{\textbf{CS240 Review Notes}}
 \input{../../styles.tex}
 \begin{document}
@@ -28,6 +29,74 @@
 \setlength{\evensidemargin}{\oddsidemargin}
 \setlength{\marginparwidth}{2.6cm}
 \setlength{\marginparsep}{0.25cm}
+
+\newpagesection{Computer Abstractions}
+
+Lecture 1 was spend worrying about a bunch of course administration stuff you already know about, so the material started in lecture 2. \\
+
+\subsection{The Computer Revolution}
+
+Technology, as you must know by now, is an ever developing beast.  Moore's law states that computation power doubles every two years and actually, it's been pretty damn accurate.  Today we have computers in everything, and smaller than ever.  As computers have become more pervasive, classes of computers have emerged:
+\begin{itemize}
+\item Desktop computers (includes desktops)
+	\begin{itemize}
+	\item General purpose, variety of software.
+	\item Subject to cost/performance trade-off.
+	\item Thought as the ``first consumer computers''.
+	\end{itemize}
+\item Server computers
+	\begin{itemize}
+	\item Network based.
+	\item High capacity, performance, reliability.
+	\item Range from small servers to building sized.
+	\end{itemize}
+\item Embedded computers
+	\begin{itemize}
+	\item Hidden as components of systems.
+	\item Stringent power/performance/cost constraints.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Components of a Computer}
+
+Computers themselves are like an onion.  You write applications that then communicate with the system software (Operating system) which then interacts with the hardware.  If we were to always just write applications that communicate with the hardware, we would need to adapt the code for every different kind of hardware configuration.  This could even mean something as simple as 4GB of RAM or 8.  This intermediary step of communication with an operating system will make you program a little slower, but the benefits greatly outweigh the cost. \\
+
+\includegraphics{graphics/onioncomputer.png}
+
+\subsubsection{Memory}
+
+Memory is where the computer stores its information.  Memory could be RAM (random access memory), the processor cache (quickly accessible memory inside the processor) or even hard drive disk. \\
+
+In theory, we can have perfect memory which is:
+\begin{itemize}
+\item Fast
+\item Large
+\item Cheap
+\end{itemize}
+
+In reality, you can only chose two from the above list.  For instance it would be incredibly to have a large processor cache, but in reality this is extremely cost prohibitive. \\
+
+\subsubsection{CPU}
+
+The CPU (central processing unit) is the brains of the computer.  It consists of three important parts.
+\begin{enumerate}
+\item Datapath
+	\begin{itemize}
+	\item The stream of information coming into the CPU.
+	\end{itemize}
+\item Control Unit
+	\begin{itemize}
+	\item TIn charge of sequencing the datapath and memory.  It decided which process gets precedence over another.  The actual ``brain'' of the processor.
+	\end{itemize}
+\item Cache Memory
+	\begin{itemize}
+	\item Small amount of memory that can be accessed instantly (the same clock cycle as the computation).  These are often layered and names L1, L2 and L3 with L1 being the easiest to access.
+	\end{itemize}		
+\end{enumerate}
+
+Here's a picture of a typical processor with the first core ``opened up'' to see its internal structure. \\
+
+\scalebox{0.65}{\includegraphics{graphics/processorcore.png}}
 
 
 
