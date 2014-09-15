@@ -10,7 +10,9 @@
 \usepackage{hyperref}
 \usepackage{enumerate}
 \usepackage{graphicx}
-\title{\textbf{CS240 Review Notes}}
+\usepackage{circuitikz}
+
+\title{\textbf{CS251 Review Notes}}
 \input{../../styles.tex}
 \begin{document}
 \makeatletter
@@ -76,6 +78,8 @@ In theory, we can have perfect memory which is:
 
 In reality, you can only chose two from the above list.  For instance it would be incredibly to have a large processor cache, but in reality this is extremely cost prohibitive. \\
 
+There are two main types of memory used in computers, volatile and non-volatile. Volatile tends to be the main memory of a computer, it loses what it contains when power is removed from the unit.  RAM is an example of this.  Non-volatile is secondary memory, typically much larger and will retain data with power turned off.  This is because physical "writes" have occurred. \\
+
 \subsubsection{CPU}
 
 The CPU (central processing unit) is the brains of the computer.  It consists of three important parts.
@@ -98,6 +102,69 @@ Here's a picture of a typical processor with the first core ``opened up'' to see
 
 \scalebox{0.65}{\includegraphics{graphics/processorcore.png}}
 
+\subsection{Metrics}
+
+How can you tell what computer is faster?  Does it come down to how fast it can complete a single task?  But if two computers are running different architectures or even have different hardware setups, certain issues begin to arise making it difficult to easily judge the relative performance of computers. \\
+
+We can measure time spent executing a program, that's certainly not a bad idea.  But what if on computer A a program is running in the background and the performance is impacted?  For this reason there are two different timing metrics, \textbf{elapsed} time and \textbf{CPU} time.  Elapsed time is the total time between issuing the command and finishing the function, whereas CPU time is only the time spent processing the program, for both the user and the system. \\
+
+\subsubsection{CPU Cycle}
+
+You may have noticed before that your CPU has a speed, something like 3.0GHz.  Sound familiar?  Good.  That number is how many CPU cycles occur in your processor per second.  In this case $3 * 10^9$ cycles. \\
+
+To envision a CPU cycle, think of your heartbeat.  CPU cycles have a high-voltage part and a low-voltage part, sort of like the pumping of your heart, only if your heart pumped a billion times a second. \\
+
+Even though having more cycles is certainly useful, it does not necessarily translate one-to-one into performance.  Some instructions may require more than one cycle to complete. For this reason, cycles per second is also not a perfect performance metric. \\
+
+Instead, we will focus on CPI, or \textbf{average cycles per instruction}.  Knowing this fact, we can use simple arithmetic to get a whole bunch of different, interesting metrics like total instructions, total clock cycles, etc.  I'll let the reader figure these out (trivial). \\
+
+For years, the general best way to gage computer performance was \textbf{MIPS}, but not the architecture, but \textbf{million instructions per second}.  More common now is \textbf{FLOPS} which is \textbf{floating point operations per second}. \\
+
+A final caveat is the use of multi-cored processors.  These are not always faster on all inputs as the developers actually need to take advantage of concurrent processing to fully utilize the CPU. \\
+
+\newpagesection{Logic Design}
+
+Computers are just incredibly complex circuitry.  Nothing more, nothing less.  Therefore, for this hardware course it is no doubt important to look at the different kinds of low level hardware that allow for computation to take place. \\
+
+\subsection{Logic Circuit}
+
+A logic circuit is an electrical circuit that performs logical operations on input signals and produces an output.  It is composed of:
+\begin{itemize}
+\item Input/Output terminals, which are independent of each other.
+\item Functional specification, the relation between input and output.
+\item Timing specification, the time it takes for signals to make it through the circuit.
+\end{itemize}
+
+There are two main types of logic circuits: \\
+\begin{itemize}
+\item Combinatorial Logic, no memory, output determined entirely by input.
+\item Sequential Logic, memory, output determined by previous and current inputs.
+\end{itemize}
+
+\subsubsection{Logic Gate}
+
+Logic gates are circuit elements that perform basic logic functions, like \textbf{and, or, nor, not}.	 Though these relations typically have either a single input or two inputs, and a single output, they may be adapted in circuitry to take any number of inputs. \\
+
+Just as in logic, there are many logic circuit set ups that are equivalent.  Each logic relation as a respective visual representation: \\
+
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	NOT & AND & OR & NAND & XNOR \\
+	\begin{circuitikz} \draw (0,0) node[not port] (mynot1) {}; \end{circuitikz} &
+	\begin{circuitikz} \draw (0,1) node[and port] (myand1) {}; \end{circuitikz} &
+	\begin{circuitikz} \draw (0,2) node[or port] (myor1) {}; \end{circuitikz} &
+	\begin{circuitikz} \draw (0,0) node[nand port] (mynand1) {}; \end{circuitikz} &
+	\begin{circuitikz} \draw (0,1) node[xnor port] (myxnor1) {}; \end{circuitikz} \\ 
+	\hline
+\end{tabular}
+
+\subsection{Combinatorial Logic Circuit}
+A circuit is combinational if it consists of connected circuit elements, such that:
+\begin{enumerate}
+\item The circuit contains no cyclic paths.
+\item Each circuit element is combinational.
+\item Each internal input node connects to exactly one output node Each internal input node connects to exactly one output node.
+\end{enumerate}
 
 
 \end{document}
