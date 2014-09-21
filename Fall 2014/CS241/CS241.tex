@@ -80,6 +80,37 @@ Let's see a few examples to see why this works. \\
 \subsection{Hexadecimal}
 Hexadecimal numbers are very similar to bits, though instead of 2 different arrangements, there are 16, represented with the numbers 0-1 and the letters A, B, C, D, E and F.  Conveniently, a group of 4 bits can define a single hexadecimal character. \\
 
+\section{Assembly Language}
+
+We will talk about \textbf{MIPS} assembly language. \\
+
+MIPS has four special purpose registers:
+\begin{itemize}
+\item Hi
+\item Lo
+\item Pc
+\item IR
+\end{itemize}
+and four special \emph{general purpose registers}:
+\begin{itemize}
+\item \$0, contains 0. 
+\item \$29, (STACK)
+\item \$30, contains a pointer to the maximum address in memory. (STACK)
+\item \$31, contains the return address.  
+\end{itemize}
+
+Assembly is great for many reasons.  It is easier on the human eye and human readable (you can make sense of it).  Generally it also has a 1-1 correspondence with machine language (almost). \\
+
+\subsection{Labels}
+Labels give a name to a location in memory.  This saves us from having to add counters to skip instructions.  Therefore, if the need arises to add or remove a line in a loop, your branch instruction will still work. \\
+
+Each line in MIPS has the general format: \emph{labels instruction comment}.  Therefore, a line can have any number of labels, instructions or comments, so long as they are placed in the right order. \\
+
+To add a label, we must put the name, followed by a colon (:).  I.e. \emph{Label1 : }.  Comments are preceded by a semi-colon (;). \\
+
+
+
+
 
 
 
