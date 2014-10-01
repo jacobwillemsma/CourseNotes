@@ -109,21 +109,41 @@ Each line in MIPS has the general format: \emph{labels instruction comment}.  Th
 To add a label, we must put the name, followed by a colon (:).  I.e. \emph{Label1 : }.  Comments are preceded by a semi-colon (;). \\
 
 
+\section{Lecture 8}
 
+\subsection{Linker} 
 
+\subsubsection{Combining Programs} 
+Let's try just concatenating the assembly files together.  The problem here is that if any of the assembly files had the same labels,  the programs would crash.  \\
 
+For this reason we begin by assembling all the dependent files first and then we'd get a bunch of say, $.o$ files if we were dealing with C.  What's a $.o$ file though?  Turns out this is just a MERL file from last time!  Then we can easily write a program called $linker$ that pulls the resulting MERL files together into one, neatly packed MERL file. \\
 
+The next problem we face is that each one of these MERL files expects to be able to run their assembly beginning at address $0x0$ and each have a relocation entry table wit the lines in the assembly that could require some tinkering.  Therefore when the linker concatenates the $.o$ files together, we have to make sure to update the $0x0$ start to the end of the previous code and update the relocation entries to reflect the new start for each concatenation. \\
 
+Presumably, we have required all of these dependencies because we want to call functions from there in our main.  But how would we call in our current state?  We couldn't, we have no idea where the labels are... let's fix this by adding ESR and ESD to the MERL file definition. \\
 
+The ESR is a line where you are saying that: "I expect somewhere in the other required files, this label, by this name will exist and that I require it to work at this address in my file.  ESD contains a list of labels and addresses of them, that I can provide to other functions. With ESR and ESD, we can begin weaving all the different labels together and satisfying the dependencies.  Again, the linker needs to properly update the addresses the the different labels in the ESD and ESR. Also, it's the linkers job to make these connections a reality.\\
 
+Of course, we could just blindly copy all the referencing we don't have in the current file to the ESR and export all the labels we do have to the ESD.  However, that's too easy, so probably wrong.  Instead, we created two assembly directives, $.import$ and $.export$.  If you expect a function to come from somewhere, $.import$ it and if you expect someone to use the function $.export$ it.  Still pretty easy. Now we can see how we start messing around with private/public functions.  \\
 
+With all this new content, let's update what we do on the first and second passes.
+\begin{itemize}
+\item Pass 1:
+	\begin{enumerate}
+	\item Symbol Table
+	\item Added to the table, $.external$ symbols."
+	\end{enumerate}
+\item Pass 2:
+	\begin{enumerate}
+	\item Synthesis
+	\item Relocation entries
+	\item ESDs
+	\item ESRs
+	\end{enumerate} 
+\end{itemize}
 
-
-
-
-
-
-
+\subsubsection{Dynamic linking}
+If we make the loader do everything the linker does, suddenly, we have dynamic linking.  This is really really easy to do because the linker and the loader are essentially doing the same thing.  We do this because obviously, it would be way way better to have each of your dependencies separate (for debug purposes).  On windows, it's called a $.dll$. \\
 
 
 
