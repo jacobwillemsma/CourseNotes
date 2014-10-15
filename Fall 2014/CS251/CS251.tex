@@ -166,5 +166,28 @@ A circuit is combinational if it consists of connected circuit elements, such th
 \item Each internal input node connects to exactly one output node Each internal input node connects to exactly one output node.
 \end{enumerate}
 
+A \textbf{bus} is a path where a bundle of signals, either input or output can run over.  Think of these as highways for information.  They are shown by a slash through the signal line, with the number of signals (bits) indicated beside it.  If the number of bits is obvious, or unimportant, or just a single bit, the number can be omitted. \\
+
+It is often very useful to write the outputs of your logic circle as a function of the input.  This can be determined by looking at the truth tables, or could even be the design specifications for your circuit. \\
+
+As with most things, there is a lingo associated with circuits, here's a few of the important terms that will come up:
+\begin{itemize}
+\item \textbf{Variable Complement}: A variable with a bar over it.  To signify \emph{not}.
+\item \textbf{Literal}: A variable or its compliment.
+\item \textbf{Implicant}: A product of literals.
+\item \textbf{Minterm}: A product that includes all input variables.
+\item \textbf{Maxterm}: A sum that includes all input variables.
+\end{itemize}
+
+\textbf{Sum of Products Format} is a format composed of minterms (remember that a minterm is a product of literals) summed together.  For the sum of products, we are interested in the lines of a truth table that are true. \\
+
+This is in constrast to the \textbf{Product-of-Sums Format}, which is interested in the maxterms of a truth table that produce false.  It then takes the product of all the maxterms. \\
+
+\subsection{Simplifying Boolean Equations}
+Being able to effectively simplify equations is a very useful skill in hardware.  Being able to effectively simplify a boolean equation can decrease the number of Boolean operators required to recieve the same goal.  This speeds up circuits and helps you produce them cheaper and faster. \\
+
+To simplify equation, we use the corresponding simplification rules, which are very similar to traditional algebra, but with only values 0 or 1. \\
+
+
 
 \end{document}
